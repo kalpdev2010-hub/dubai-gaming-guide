@@ -106,7 +106,7 @@
                             <li><strong>Max Power:</strong> Flawless PS1 & Dreamcast</li>
                         </ul>
                     </div>
-                    <a href="YOUR_AMAZON_LINK_HERE" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" data-search="Anbernic RG35XXSP" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
@@ -121,7 +121,7 @@
                             <li><strong>Max Power:</strong> Nintendo 64 & PSP</li>
                         </ul>
                     </div>
-                    <a href="YOUR_AMAZON_LINK_HERE" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" data-search="Anbernic RG40XX V" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
@@ -136,7 +136,7 @@
                             <li><strong>Max Power:</strong> PlayStation 2 & GameCube</li>
                         </ul>
                     </div>
-                    <a href="YOUR_AMAZON_LINK_HERE" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" data-search="Anbernic RG Cube" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
@@ -151,7 +151,7 @@
                             <li><strong>Max Power:</strong> PS2, GameCube, PC Stream</li>
                         </ul>
                     </div>
-                    <a href="YOUR_AMAZON_LINK_HERE" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" data-search="Anbernic RG556" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
             </div>
         </section>
@@ -187,6 +187,16 @@
                 }
             });
         }
+
+        // Automated Amazon Affiliate Script
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.btn-amazon').forEach(btn => {
+                const searchQuery = btn.getAttribute('data-search');
+                if(searchQuery) {
+                    btn.href = `https://www.amazon.ae/s?k=${encodeURIComponent(searchQuery)}&tag=dubaicinema-21`;
+                }
+            });
+        });
     </script>
 
     <div class="network-footer">
