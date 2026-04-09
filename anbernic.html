@@ -24,8 +24,11 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        .nav-link { display: inline-block; color: var(--cyan); text-decoration: none; font-weight: bold; margin-bottom: 2rem; transition: color 0.2s; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; border: 1px solid var(--cyan); padding: 8px 16px; border-radius: 50px; }
-        .nav-link:hover { color: #121212; background-color: var(--cyan); box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
+        /* Global Navigation Pills */
+        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 3rem; flex-wrap: wrap; justify-content: center; }
+        .filter-icon { color: var(--primary); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; }
+        .filter-btn { display: inline-block; text-decoration: none; background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); color: #ffffff; box-shadow: 0 0 10px rgba(138, 43, 226, 0.4); }
 
         h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 1rem; font-size: 1.8rem; }
         .intro-text { color: #aaaaaa; font-size: 1.05rem; margin-bottom: 2rem; }
@@ -38,11 +41,12 @@
         .tagline { display: inline-block; background: var(--primary); color: var(--button-text); padding: 5px 15px; font-size: 0.8rem; border-radius: 50px; margin-bottom: 15px; font-weight: bold; align-self: flex-start; text-transform: uppercase; }
         .card p { color: #cccccc; font-size: 0.95rem; margin-bottom: 15px; }
         
-        .specs-list { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: auto; border-left: 3px solid var(--primary); margin-bottom: 15px; }
+        .specs-list { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: auto; border-left: 3px solid var(--primary); margin-bottom: 20px; }
         .specs-list ul { margin: 0; padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 1.7; }
 
-        /* Amazon Affiliate Button Styles */
-        .btn-amazon { display: block; width: 100%; box-sizing: border-box; background-color: #28a745; color: #ffffff; padding: 12px 20px; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: all 0.2s ease; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px; }
+        /* Amazon Affiliate Button - Fixed to match pill style */
+        .btn { display: inline-block; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-align: center; color: #fff; align-self: flex-start; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        .btn-amazon { background-color: #28a745; }
         .btn-amazon:hover { background-color: #218838; box-shadow: 0 0 12px rgba(40, 167, 69, 0.5); transform: translateY(-2px); }
 
         /* Footer Styles */
@@ -60,7 +64,16 @@
     </header>
     
     <div class="container">
-        <a href="index.html" class="nav-link">← Back to Main Guide</a>
+        
+        <div class="filter-wrapper">
+            <span class="filter-icon">Navigation</span>
+            <a href="index.html" class="filter-btn">Main Guide</a>
+            <a href="playstation.html" class="filter-btn">PlayStation</a>
+            <a href="xbox.html" class="filter-btn">Xbox</a>
+            <a href="nintendo.html" class="filter-btn">Nintendo</a>
+            <a href="setup.html" class="filter-btn">Command Center</a>
+            <a href="anbernic.html" class="filter-btn active">Retro (Anbernic)</a>
+        </div>
 
         <section>
             <h2>The 2026 Hardware Lineup</h2>
@@ -70,7 +83,7 @@
                 <div class="card">
                     <h3>RG35XXSP</h3>
                     <span class="tagline">The Commuter's Dream</span>
-                    <p>Perfectly recreating the iconic folding clamshell design of the early 2000s, this is the ultimate pocket-friendly console. The screen is protected without needing a case, making it perfect for daily commutes on the Metro.</p>
+                    <p>Perfectly recreating the iconic folding clamshell design of the early 2000s, this is the ultimate pocket-friendly console. The screen is protected without needing a case.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Clamshell (Folding)</li>
@@ -79,13 +92,13 @@
                             <li><strong>Max Power:</strong> Flawless PS1 & Dreamcast</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check Price on Amazon</a>
+                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
                     <h3>RG40XX V</h3>
                     <span class="tagline">The Classic Vertical</span>
-                    <p>For the gamer who wants the exact ergonomic feel of a classic 1989 handheld "brick", but modernized. It perfectly balances a beautiful, bright screen with a highly portable footprint and an added analog stick.</p>
+                    <p>For the gamer who wants the exact ergonomic feel of a classic 1989 handheld "brick", but modernized. It perfectly balances a beautiful, bright screen with portability.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Vertical (Classic)</li>
@@ -94,37 +107,37 @@
                             <li><strong>Max Power:</strong> Nintendo 64 & PSP</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check Price on Amazon</a>
+                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
                     <h3>RG Cube</h3>
                     <span class="tagline">The 1:1 Multi-Tasker</span>
-                    <p>A highly unique premium handheld featuring a perfectly square screen. The 1:1 aspect ratio makes it the undisputed champion for playing classic Game Boy Color and dual-screen Nintendo DS titles without black bars.</p>
+                    <p>A highly unique premium handheld featuring a perfectly square screen. The 1:1 aspect ratio makes it the undisputed champion for classic Game Boy Color and dual-screen Nintendo DS titles.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Horizontal Premium</li>
-                            <li><strong>Display:</strong> 3.95-inch Square (1:1 Ratio)</li>
+                            <li><strong>Display:</strong> 3.95-inch Square (1:1)</li>
                             <li><strong>OS:</strong> Android 13</li>
-                            <li><strong>Max Power:</strong> PlayStation 2 (PS2) & GameCube</li>
+                            <li><strong>Max Power:</strong> PlayStation 2 & GameCube</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check Price on Amazon</a>
+                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
                     <h3>RG556</h3>
                     <span class="tagline">The Flagship</span>
-                    <p>The ultimate high-end portable powerhouse. Built for the hardcore enthusiast, it features ergonomic grips, Hall effect joysticks to prevent drift, and the power to crush massive 3D games and stream PC titles.</p>
+                    <p>The ultimate high-end portable powerhouse. Built for the hardcore enthusiast, it features ergonomic grips, Hall effect joysticks, and the power to crush massive 3D games.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Horizontal Ergonomic</li>
-                            <li><strong>Display:</strong> 5.48-inch AMOLED (1080p)</li>
+                            <li><strong>Display:</strong> 5.48-inch AMOLED</li>
                             <li><strong>OS:</strong> Android 13</li>
-                            <li><strong>Max Power:</strong> PS2, GameCube, Xbox Game Pass</li>
+                            <li><strong>Max Power:</strong> PS2, GameCube, PC Stream</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check Price on Amazon</a>
+                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
             </div>
         </section>
