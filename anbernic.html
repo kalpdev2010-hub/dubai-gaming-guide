@@ -9,6 +9,9 @@
     <style>
         :root {
             --primary: #8a2be2; /* Retro Purple */
+            --ps-blue: #00439c;
+            --xbox-green: #107c10;
+            --nin-red: #e60012;
             --cyan: #00e5ff;
             --dark: #121212;
             --gray: #2a2a2a;
@@ -18,16 +21,21 @@
         }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
         
-        header { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #0f0f0f, #1a0033); border-bottom: 3px solid var(--primary); }
+        /* Header with Global Nav integrated */
+        header { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #0f0f0f, #1a0033); border-bottom: 3px solid var(--primary); }
         header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px rgba(138, 43, 226, 0.6); }
-        header p { color: #cccccc; font-size: 1.1rem; max-width: 700px; margin: 10px auto; }
+        header p { color: #cccccc; font-size: 1.1rem; max-width: 700px; margin: 10px auto 20px auto; }
         
+        .header-nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .header-nav a { color: #ffffff; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.3); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; transition: all 0.2s; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-nav a:hover { background: rgba(255, 255, 255, 0.1); border-color: #ffffff; }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        /* Global Navigation Pills */
-        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 3rem; flex-wrap: wrap; justify-content: center; }
+        /* Local Page Filter */
+        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
         .filter-icon { color: var(--primary); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; }
-        .filter-btn { display: inline-block; text-decoration: none; background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
         .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); color: #ffffff; box-shadow: 0 0 10px rgba(138, 43, 226, 0.4); }
 
         h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 1rem; font-size: 1.8rem; }
@@ -39,14 +47,13 @@
         
         .card h3 { margin-top: 0; font-size: 1.4rem; color: #fff; margin-bottom: 5px; }
         .tagline { display: inline-block; background: var(--primary); color: var(--button-text); padding: 5px 15px; font-size: 0.8rem; border-radius: 50px; margin-bottom: 15px; font-weight: bold; align-self: flex-start; text-transform: uppercase; }
-        .card p { color: #cccccc; font-size: 0.95rem; margin-bottom: 15px; }
+        .card p { color: #cccccc; font-size: 0.95rem; margin-bottom: 15px; flex-grow: 1; }
         
-        .specs-list { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: auto; border-left: 3px solid var(--primary); margin-bottom: 20px; }
+        .specs-list { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-top: 10px; border-left: 3px solid var(--primary); margin-bottom: 20px; }
         .specs-list ul { margin: 0; padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 1.7; }
 
-        /* Amazon Affiliate Button - Fixed to match pill style */
-        .btn { display: inline-block; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-align: center; color: #fff; align-self: flex-start; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
-        .btn-amazon { background-color: #28a745; }
+        /* Amazon Affiliate Pill Button */
+        .btn-amazon { display: inline-block; padding: 10px 22px; background-color: #28a745; color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; align-self: flex-start; }
         .btn-amazon:hover { background-color: #218838; box-shadow: 0 0 12px rgba(40, 167, 69, 0.5); transform: translateY(-2px); }
 
         /* Footer Styles */
@@ -61,23 +68,34 @@
     <header>
         <h1>Anbernic Retro Gaming</h1>
         <p>Your pocket-sized time machines. Emulate the golden age of gaming on the go, from 8-bit classics to PlayStation 2 powerhouses.</p>
+        
+        <div class="header-nav">
+            <a href="index.html">Home Gateway</a>
+            <a href="playstation.html">PlayStation World</a>
+            <a href="xbox.html">Xbox World</a>
+            <a href="nintendo.html">Nintendo World</a>
+            <a href="setup.html">Command Center</a>
+        </div>
     </header>
     
     <div class="container">
         
         <div class="filter-wrapper">
-            <span class="filter-icon">Navigation</span>
-            <a href="index.html" class="filter-btn">Main Guide</a>
-            <a href="playstation.html" class="filter-btn">PlayStation</a>
-            <a href="xbox.html" class="filter-btn">Xbox</a>
-            <a href="nintendo.html" class="filter-btn">Nintendo</a>
-            <a href="setup.html" class="filter-btn">Command Center</a>
-            <a href="anbernic.html" class="filter-btn active">Retro (Anbernic)</a>
+            <span class="filter-icon">Explore</span>
+            <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+            <button class="filter-btn" onclick="filterSelection('info', this)">Info</button>
+            <button class="filter-btn" onclick="filterSelection('console', this)">Console</button>
+            <button class="filter-btn" onclick="filterSelection('ecosystem', this)">Emulation Ecosystem</button>
         </div>
 
-        <section>
+        <section data-category="info">
+            <h2>The Retro Revolution</h2>
+            <p class="intro-text">Anbernic is the undisputed king of dedicated retro handhelds. Unlike modern consoles, these pocket-sized time machines require no internet connection, no monthly subscriptions, and no expensive game discs. They are explicitly designed to flawlessly emulate thousands of classic games from the golden age of gaming.</p>
+        </section>
+
+        <section data-category="console">
             <h2>The 2026 Hardware Lineup</h2>
-            <p class="intro-text">Anbernic dominates the retro handheld market by producing premium devices for every form factor. Whether you want pure nostalgia or Android-powered performance, these are the top 4 models to target.</p>
+            <p class="intro-text">Anbernic dominates the market by producing premium devices for every single form factor. Here are the top 4 models to target based on your lifestyle.</p>
             
             <div class="grid">
                 <div class="card">
@@ -92,13 +110,13 @@
                             <li><strong>Max Power:</strong> Flawless PS1 & Dreamcast</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
                     <h3>RG40XX V</h3>
                     <span class="tagline">The Classic Vertical</span>
-                    <p>For the gamer who wants the exact ergonomic feel of a classic 1989 handheld "brick", but modernized. It perfectly balances a beautiful, bright screen with portability.</p>
+                    <p>For the gamer who wants the exact ergonomic feel of a classic 1989 handheld "brick", but modernized. It perfectly balances a beautiful, bright screen with high portability.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Vertical (Classic)</li>
@@ -107,13 +125,13 @@
                             <li><strong>Max Power:</strong> Nintendo 64 & PSP</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
                     <h3>RG Cube</h3>
                     <span class="tagline">The 1:1 Multi-Tasker</span>
-                    <p>A highly unique premium handheld featuring a perfectly square screen. The 1:1 aspect ratio makes it the undisputed champion for classic Game Boy Color and dual-screen Nintendo DS titles.</p>
+                    <p>A highly unique premium handheld featuring a perfectly square screen. The 1:1 aspect ratio makes it the undisputed champion for classic Game Boy Color and Nintendo DS titles.</p>
                     <div class="specs-list">
                         <ul>
                             <li><strong>Form Factor:</strong> Horizontal Premium</li>
@@ -122,7 +140,7 @@
                             <li><strong>Max Power:</strong> PlayStation 2 & GameCube</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
                 
                 <div class="card">
@@ -137,28 +155,43 @@
                             <li><strong>Max Power:</strong> PS2, GameCube, PC Stream</li>
                         </ul>
                     </div>
-                    <a href="#" class="btn btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
+                    <a href="#" class="btn-amazon" target="_blank" rel="noopener noreferrer">Check on Amazon</a>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section data-category="ecosystem">
             <h2>The Emulation Ecosystem Explained</h2>
             <p class="intro-text">Unlike PlayStation or Xbox, you do not buy individual games for Anbernic devices. Instead, they run on emulation software.</p>
             <div class="card" style="background-color: var(--light); display: block;">
-                <p><strong>What is a ROM?</strong><br>
-                A ROM is a digital file that contains a copy of data from a read-only memory chip, usually from a video game cartridge or disc. You load these files onto a MicroSD card, insert it into the Anbernic device, and you carry thousands of games in a single slot.</p>
+                <h3 style="color: var(--primary);">What is a ROM?</h3>
+                <p>A ROM is a digital file that contains a copy of data from a read-only memory chip, usually from a video game cartridge or disc. You load these files onto a MicroSD card, insert it into the Anbernic device, and you carry thousands of games in a single slot.</p>
                 
-                <p style="margin-top: 20px;"><strong>What you need to get started:</strong></p>
+                <h3 style="color: var(--primary); margin-top: 25px;">What you need to get started:</h3>
                 <ul style="color: #cccccc; line-height: 1.8;">
-                    <li><strong>A High-Quality MicroSD Card:</strong> The generic cards included in the box often fail. Always upgrade to a reputable brand like SanDisk or Samsung (64GB is perfect for retro games, 256GB if you want PS2 games).</li>
+                    <li><strong>A High-Quality MicroSD Card:</strong> The generic cards included in the box often fail. Always upgrade to a reputable brand like SanDisk or Samsung (64GB is perfect for standard retro games, 256GB if you want heavy PS2/GameCube files).</li>
                     <li><strong>Screen Protector:</strong> Most premium Anbernic models include a tempered glass protector in the box. Always apply it immediately.</li>
-                    <li><strong>A Carrying Case:</strong> Unless you buy the folding RG35XXSP, grab a hardshell case to protect the joysticks while traveling.</li>
+                    <li><strong>A Carrying Case:</strong> Unless you buy the folding RG35XXSP, grab a hardshell case to protect the analog joysticks while traveling in your backpack.</li>
                 </ul>
             </div>
         </section>
 
     </div>
+
+    <script>
+        function filterSelection(category, activeBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+            
+            document.querySelectorAll('section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
     <div class="network-footer">
         <h4>Explore The Dubai Tech Network</h4>
