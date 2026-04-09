@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Command Center | Dubai Gaming Guide</title>
+    <meta name="description" content="Build the ultimate gaming setup. The best gaming TVs, monitors, ergonomic chairs, desks, and headsets to buy in Dubai in 2026.">
+    <style>
+        :root { 
+            --primary: #00e5ff; 
+            --primary-dark: #00b8cc;
+            --amazon: #28a745;  
+            --dark: #121212; 
+            --gray: #2a2a2a; 
+            --light: #1a1a1a; 
+            --text-light: #ffffff;
+            --button-text: #121212; 
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 2rem 2rem; background: linear-gradient(135deg, #001a1e, #004d56); border-bottom: 3px solid var(--primary); }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
+        
+        .quick-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+        .nav-pill { padding: 8px 20px; background-color: rgba(0,0,0,0.5); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 0.85rem; border: 1px solid #444; transition: all 0.2s ease; }
+        .nav-pill:hover { background-color: var(--primary); color: var(--button-text); border-color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Filter Styles */
+        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+        .filter-icon { color: var(--primary); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); color: var(--button-text); box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
+        
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 2rem; color: #fff; font-size: 1.8rem; }
+        .intro-text { color: #cccccc; font-size: 1.05rem; margin-bottom: 2rem; max-width: 900px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 1.5rem; }
+        
+        .card { padding: 2rem; border-radius: 12px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); }
+        .card h3 { margin-top: 0; font-size: 1.3rem; margin-bottom: 5px; color: #fff; }
+        .tag { color: var(--primary); font-size: 0.85rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .card p { flex-grow: 1; color: #aaaaaa; font-size: 0.95rem; }
+        
+        .btn-amazon { margin-top: 20px; padding: 12px 25px; background-color: var(--amazon); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: background 0.2s ease; display: block; width: 100%; box-sizing: border-box; }
+        .btn-amazon:hover { background-color: #218838; }
+
+        .info-box { background: var(--gray); padding: 2rem; border-radius: 12px; border: 1px solid #444; margin-bottom: 2rem; }
+        .info-box h3 { color: var(--primary); margin-top: 0; }
+        .info-box ul { padding-left: 20px; color: #cccccc; }
+        .info-box li { margin-bottom: 10px; }
+        .info-box strong { color: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Command Center</h1>
+        <p>The ultimate displays, audio, and furniture for every platform.</p>
+        <div class="quick-nav">
+            <a href="index.html" class="nav-pill">Home Gateway</a>
+            <a href="playstation.html" class="nav-pill">PlayStation World</a>
+            <a href="xbox.html" class="nav-pill">Xbox World</a>
+            <a href="nintendo.html" class="nav-pill">Nintendo World</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="filter-wrapper">
+            <span class="filter-icon">Filter Gear</span>
+            <button class="filter-btn active" onclick="filterSelection('info', this)">Info</button>
+            <button class="filter-btn" onclick="filterSelection('displays', this)">Displays</button>
+            <button class="filter-btn" onclick="filterSelection('furniture', this)">Furniture</button>
+            <button class="filter-btn" onclick="filterSelection('audio', this)">Audio</button>
+            <button class="filter-btn" onclick="filterSelection('lights', this)">Atmosphere</button>
+        </div>
+
+        <section data-category="info">
+            <h2>1. The Anatomy of a Gaming Room</h2>
+            <div class="info-box">
+                <h3>Why Your Setup Matters</h3>
+                <p>Buying a powerful console is only half the battle. If you plug a PS5 Pro into an outdated display while sitting on a cheap chair, you are bottlenecking the experience and risking your health. Building a proper "Command Center" revolves around four key pillars:</p>
+                <ul>
+                    <li><strong>The Visuals:</strong> Consoles now output at 4K resolution and up to 120 frames per second. You need an OLED TV or a high-refresh monitor to actually see the speed and clarity your console is producing.</li>
+                    <li><strong>The Foundation (Ergonomics):</strong> Gaming sessions can last hours. Proper lumbar support from premium chairs and the right desk height prevents long-term back pain and spinal issues.</li>
+                    <li><strong>The Sound:</strong> True spatial audio isn't just about explosions; it is a competitive advantage. High-end headsets allow you to pinpoint exact enemy footsteps and deeply immerse yourself in cinematic worlds.</li>
+                    <li><strong>The Atmosphere:</strong> Smart bias lighting (lights placed behind your screen) reduces eye strain in dark rooms while syncing with your game for total room immersion.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section data-category="displays" style="display: none;">
+            <h2>2. The Visuals (TVs & Monitors)</h2>
+            <p class="intro-text">Choose a 40-55" TV for immersive living room console gaming, or a high-refresh monitor for a competitive desk setup.</p>
+            
+            <h3 style="color: #fff;">Living Room TVs (42" - 55")</h3>
+            <div class="grid">
+                <div class="card"><h3>LG C4 OLED (42" or 48")</h3><span class="tag">The Gold Standard</span><p>The undisputed king of gaming TVs. Perfect true blacks and incredibly fast response times.</p><a href="#" class="btn-amazon" data-search="LG C4 OLED TV 42 inch">Check In Amazon</a></div>
+                <div class="card"><h3>Samsung S90D OLED (55")</h3><span class="tag">Brightest Colors</span><p>Uses QD-OLED technology for incredibly vibrant colors that pop off the screen.</p><a href="#" class="btn-amazon" data-search="Samsung S90D OLED TV 55">Check In Amazon</a></div>
+                <div class="card"><h3>Sony BRAVIA XR A95L (55")</h3><span class="tag">PS5 Perfect Match</span><p>Sony's flagship TV. It automatically optimizes its settings perfectly the second you plug in a PS5.</p><a href="#" class="btn-amazon" data-search="Sony Bravia A95L 55 inch">Check In Amazon</a></div>
+                <div class="card"><h3>TCL QM8 Mini-LED (55")</h3><span class="tag">Best Value</span><p>Almost as good as an OLED but significantly cheaper and much brighter for sunny living rooms.</p><a href="#" class="btn-amazon" data-search="TCL QM8 Mini LED 55">Check In Amazon</a></div>
+                <div class="card"><h3>Hisense U8N (55")</h3><span class="tag">Budget Mini-LED</span><p>Delivers 4K 144Hz gaming capabilities at a price point that destroys the competition.</p><a href="#" class="btn-amazon" data-search="Hisense U8N 55 inch TV">Check In Amazon</a></div>
+            </div>
+
+            <h3 style="color: #fff; margin-top: 3rem;">Desk Setup Monitors</h3>
+            <div class="grid">
+                <div class="card"><h3>Alienware AW3423DWF</h3><span class="tag">Ultrawide OLED</span><p>A curved ultrawide monitor that completely surrounds your vision for maximum immersion.</p><a href="#" class="btn-amazon" data-search="Alienware AW3423DWF Monitor">Check In Amazon</a></div>
+                <div class="card"><h3>LG UltraGear 32GS95UE</h3><span class="tag">Dual-Mode 4K</span><p>Can switch between beautiful 4K at 240Hz, or ultra-fast 1080p at 480Hz with the push of a button.</p><a href="#" class="btn-amazon" data-search="LG UltraGear 32GS95UE OLED">Check In Amazon</a></div>
+                <div class="card"><h3>Samsung Odyssey OLED G8</h3><span class="tag">Smart Monitor</span><p>Incredible contrast with built-in streaming apps so you can watch Netflix without turning on a PC.</p><a href="#" class="btn-amazon" data-search="Samsung Odyssey OLED G8">Check In Amazon</a></div>
+                <div class="card"><h3>ASUS ROG Swift OLED PG27</h3><span class="tag">Competitive Choice</span><p>A 27-inch 1440p beast. The perfect size and speed for competitive shooter fans.</p><a href="#" class="btn-amazon" data-search="ASUS ROG Swift OLED PG27">Check In Amazon</a></div>
+                <div class="card"><h3>Gigabyte M32U</h3><span class="tag">Budget 4K</span><p>A brilliant, flat 32-inch 4K screen with HDMI 2.1, making it perfect for the PS5 and Xbox Series X.</p><a href="#" class="btn-amazon" data-search="Gigabyte M32U Monitor">Check In Amazon</a></div>
+            </div>
+        </section>
+
+        <section data-category="furniture" style="display: none;">
+            <h2>3. The Foundation (Desks & Seating)</h2>
+            <p class="intro-text">Do not ruin your back. Invest in high-quality ergonomics for long gaming sessions.</p>
+            
+            <h3 style="color: #fff;">Gaming Desks</h3>
+            <div class="grid">
+                <div class="card"><h3>Secretlab Magnus Pro XL</h3><span class="tag">The Ultimate Desk</span><p>An electric standing desk with a magnetic cable management tray that hides every single wire perfectly.</p><a href="#" class="btn-amazon" data-search="Secretlab Magnus Pro XL">Check In Amazon</a></div>
+                <div class="card"><h3>FlexiSpot E7 Standing Desk</h3><span class="tag">Health Focused</span><p>A heavy-duty motorized desk that allows you to game while standing to improve your posture.</p><a href="#" class="btn-amazon" data-search="Flexispot E7 Standing Desk">Check In Amazon</a></div>
+                <div class="card"><h3>Eureka Ergonomic L-Shape</h3><span class="tag">Corner Setup</span><p>Massive surface area perfect for a multi-monitor setup tucked into the corner of your room.</p><a href="#" class="btn-amazon" data-search="Eureka Ergonomic L Shaped Desk">Check In Amazon</a></div>
+                <div class="card"><h3>Corsair Platform:6</h3><span class="tag">Modular Beast</span><p>Comes with a built-in pegboard system and rails to mount your cameras, lights, and gear.</p><a href="#" class="btn-amazon" data-search="Corsair Platform 6 Desk">Check In Amazon</a></div>
+                <div class="card"><h3>Arozzi Arena Gaming Desk</h3><span class="tag">Budget Friendly</span><p>A simple, sturdy desk where the entire surface is covered in a custom water-resistant mousepad.</p><a href="#" class="btn-amazon" data-search="Arozzi Arena Gaming Desk">Check In Amazon</a></div>
+            </div>
+
+            <h3 style="color: #fff; margin-top: 3rem;">Ergonomic Chairs</h3>
+            <div class="grid">
+                <div class="card"><h3>Secretlab Titan Evo</h3><span class="tag">Best Overall</span><p>The undisputed king of gaming chairs, featuring built-in adjustable lumbar support and magnetic pillows.</p><a href="#" class="btn-amazon" data-search="Secretlab Titan Evo">Check In Amazon</a></div>
+                <div class="card"><h3>Herman Miller Embody (Logitech)</h3><span class="tag">The Luxury Choice</span><p>A medical-grade ergonomic chair built in collaboration with Logitech. Extremely expensive, but worth it.</p><a href="#" class="btn-amazon" data-search="Herman Miller Logitech Embody">Check In Amazon</a></div>
+                <div class="card"><h3>Razer Iskur V2</h3><span class="tag">Dynamic Support</span><p>Features a highly unique, 6D adjustable lumbar system that moves with your spine as you shift weight.</p><a href="#" class="btn-amazon" data-search="Razer Iskur V2">Check In Amazon</a></div>
+                <div class="card"><h3>AndaSeat Kaiser 4</h3><span class="tag">For Big & Tall</span><p>A massive, ultra-comfortable chair built specifically to support larger frames with plush PVC leather.</p><a href="#" class="btn-amazon" data-search="AndaSeat Kaiser 4">Check In Amazon</a></div>
+                <div class="card"><h3>Corsair T3 Rush</h3><span class="tag">Best Fabric</span><p>Uses soft, breathable fabric instead of leather, which is perfect for staying cool in Dubai's heat.</p><a href="#" class="btn-amazon" data-search="Corsair T3 Rush Gaming Chair">Check In Amazon</a></div>
+            </div>
+        </section>
+
+        <section data-category="audio" style="display: none;">
+            <h2>4. The Sound (Headsets)</h2>
+            <p class="intro-text">Hear enemy footsteps before you see them. These are the top 10 headsets on the market.</p>
+            <div class="grid">
+                <div class="card"><h3>SteelSeries Arctis Nova Pro Wireless</h3><span class="tag">The King</span><p>Features active noise cancellation and hot-swappable batteries so it never dies.</p><a href="#" class="btn-amazon" data-search="SteelSeries Arctis Nova Pro Wireless">Check In Amazon</a></div>
+                <div class="card"><h3>Audeze Maxwell</h3><span class="tag">Audiophile Choice</span><p>Uses heavy planar magnetic drivers for the most incredibly detailed sound quality in gaming.</p><a href="#" class="btn-amazon" data-search="Audeze Maxwell Wireless Gaming Headset">Check In Amazon</a></div>
+                <div class="card"><h3>Astro A50 X</h3><span class="tag">The Switcher</span><p>Connects to your PS5, Xbox, and PC at the same time and switches between them instantly.</p><a href="#" class="btn-amazon" data-search="Astro A50 X Wireless">Check In Amazon</a></div>
+                <div class="card"><h3>Razer BlackShark V2 Pro</h3><span class="tag">Esports Pick</span><p>Incredibly lightweight with a broadcast-quality microphone favored by professional gamers.</p><a href="#" class="btn-amazon" data-search="Razer BlackShark V2 Pro">Check In Amazon</a></div>
+                <div class="card"><h3>HyperX Cloud III Wireless</h3><span class="tag">Endless Battery</span><p>Offers an absurd 120-hour battery life and their signature, ultra-soft memory foam earcups.</p><a href="#" class="btn-amazon" data-search="HyperX Cloud III Wireless">Check In Amazon</a></div>
+                <div class="card"><h3>Logitech G PRO X 2</h3><span class="tag">Graphene Drivers</span><p>Features revolutionary Graphene audio drivers to eliminate distortion at high volumes.</p><a href="#" class="btn-amazon" data-search="Logitech G PRO X 2 Wireless">Check In Amazon</a></div>
+                <div class="card"><h3>Turtle Beach Stealth Pro</h3><span class="tag">Maximum Bass</span><p>Heavy, booming bass and excellent noise cancellation for total immersion.</p><a href="#" class="btn-amazon" data-search="Turtle Beach Stealth Pro">Check In Amazon</a></div>
+                <div class="card"><h3>Sony INZONE H9</h3><span class="tag">PS5 Optimized</span><p>Built by Sony, matching the PS5 perfectly and utilizing its 3D spatial audio tech.</p><a href="#" class="btn-amazon" data-search="Sony INZONE H9">Check In Amazon</a></div>
+                <div class="card"><h3>Xbox Wireless Headset</h3><span class="tag">Best Xbox Value</span><p>The official headset. Connects to your Xbox instantly without needing any USB dongles.</p><a href="#" class="btn-amazon" data-search="Xbox Wireless Headset">Check In Amazon</a></div>
+                <div class="card"><h3>Corsair HS80 MAX</h3><span class="tag">Dolby Atmos</span><p>Features incredible built-in Dolby Atmos surround sound for an immersive PC experience.</p><a href="#" class="btn-amazon" data-search="Corsair HS80 MAX Wireless">Check In Amazon</a></div>
+            </div>
+        </section>
+
+        <section data-category="lights" style="display: none;">
+            <h2>5. The Atmosphere (Smart Lighting)</h2>
+            <p class="intro-text">Elevate the vibe of your room. These smart lights sync directly with what is happening on your screen.</p>
+            <div class="grid">
+                <div class="card"><h3>Philips Hue Play Light Bars</h3><span class="tag">Premium Lighting</span><p>Mount these behind your TV or monitor. They scan the screen and extend the colors onto your wall.</p><a href="#" class="btn-amazon" data-search="Philips Hue Play Light Bar">Check In Amazon</a></div>
+                <div class="card"><h3>Govee Glide Hexa Panels</h3><span class="tag">Wall Art</span><p>Modular light panels you can arrange in any shape on your wall. Cheaper and brighter than competitors.</p><a href="#" class="btn-amazon" data-search="Govee Glide Hexa Light Panels">Check In Amazon</a></div>
+                <div class="card"><h3>Govee TV LED Backlight T2</h3><span class="tag">TV Sync</span><p>Uses a small camera to look at your TV screen and instantly matches the LED strip colors behind it.</p><a href="#" class="btn-amazon" data-search="Govee TV LED Backlight T2">Check In Amazon</a></div>
+                <div class="card"><h3>Elgato Key Light Air</h3><span class="tag">For Streamers</span><p>Professional, soft studio lighting controlled via Wi-Fi if you plan on streaming or making videos.</p><a href="#" class="btn-amazon" data-search="Elgato Key Light Air">Check In Amazon</a></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Filter Script
+        function filterSelection(category, activeBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+            
+            document.querySelectorAll('section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        // Automated Amazon Affiliate Script
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.btn-amazon').forEach(btn => {
+                const searchQuery = btn.getAttribute('data-search');
+                btn.href = `https://www.amazon.ae/s?k=${encodeURIComponent(searchQuery)}&tag=dubaicinema-21`;
+            });
+        });
+    </script>
+</body>
+</html>
