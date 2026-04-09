@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo World | Dubai Gaming Guide</title>
+    <meta name="description" content="Explore the Nintendo ecosystem. Compare the Switch 2, Switch OLED, and Lite, and discover the best Mario and Zelda games in Dubai.">
+    <style>
+        :root { 
+            --nin-red: #e60012; 
+            --nin-light: #ff1a2b;
+            --amazon: #28a745;  
+            --dark: #121212; 
+            --gray: #2a2a2a; 
+            --light: #1a1a1a; 
+            --text-light: #ffffff;
+            --text-dark: #121212; 
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 2rem 2rem; background: linear-gradient(135deg, #330004, #e60012); border-bottom: 3px solid var(--nin-light); }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+        
+        .quick-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+        .nav-pill { padding: 8px 20px; background-color: rgba(0,0,0,0.5); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 0.85rem; border: 1px solid #444; transition: all 0.2s ease; }
+        .nav-pill:hover { background-color: var(--nin-light); border-color: var(--nin-light); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Filter Styles */
+        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+        .filter-icon { color: var(--nin-light); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--nin-light); border-color: var(--nin-light); color: #fff; box-shadow: 0 0 10px rgba(255, 26, 43, 0.5); }
+        
+        /* Section Headers */
+        h2 { border-left: 4px solid var(--nin-red); padding-left: 15px; margin-top: 1rem; color: #fff; font-size: 1.8rem; }
+        .intro-text { color: #cccccc; font-size: 1.05rem; margin-bottom: 2rem; max-width: 900px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 1.5rem; }
+        
+        .card { padding: 2rem; border-radius: 12px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--nin-red); box-shadow: 0 0 15px rgba(230, 0, 18, 0.3); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; color: #fff; }
+        .tag { color: var(--nin-light); font-size: 0.85rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .card p { flex-grow: 1; color: #aaaaaa; font-size: 0.95rem; }
+        
+        .btn-amazon { margin-top: 20px; padding: 12px 25px; background-color: var(--amazon); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: background 0.2s ease; display: block; width: 100%; box-sizing: border-box; }
+        .btn-amazon:hover { background-color: #218838; }
+
+        .info-box { background: var(--gray); padding: 2rem; border-radius: 12px; border: 1px solid #444; margin-bottom: 2rem; }
+        .info-box h3 { color: var(--nin-light); margin-top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nintendo World</h1>
+        <p>The undisputed king of family gaming and portability.</p>
+        <div class="quick-nav">
+            <a href="index.html" class="nav-pill">Home Gateway</a>
+            <a href="playstation.html" class="nav-pill">PlayStation World</a>
+            <a href="xbox.html" class="nav-pill">Xbox World</a>
+            <a href="setup.html" class="nav-pill">Command Center</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="filter-wrapper">
+            <span class="filter-icon">Explore</span>
+            <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+            <button class="filter-btn" onclick="filterSelection('info', this)">Info</button>
+            <button class="filter-btn" onclick="filterSelection('hardware', this)">Consoles</button>
+            <button class="filter-btn" onclick="filterSelection('games', this)">Games & Gear</button>
+        </div>
+
+        <section data-category="info">
+            <h2>1. The Nintendo Experience</h2>
+            <div class="info-box">
+                <h3>Why Choose Nintendo?</h3>
+                <p>You don't buy a Nintendo console for ultra-realistic 4K graphics; you buy it because it is the <strong>only</strong> place you can play legendary franchises like Mario, Zelda, and Pokémon. Nintendo is built around the "Hybrid" concept: the console is a tablet that you can plug into your living room TV for a big-screen experience, or instantly pull out and take on an airplane to play anywhere in the world.</p>
+            </div>
+        </section>
+
+        <section data-category="hardware">
+            <h2>2. The Hardware Cities</h2>
+            <p class="intro-text">Choose how you want to play: On the TV, on the go, or both.</p>
+            <div class="grid hardware-grid">
+                <div class="card">
+                    <h3>Nintendo Switch 2</h3><span class="tag">The New Flagship</span>
+                    <p>The brand new generation. It features a larger screen, magnetic controllers, and massively upgraded power while keeping the hybrid TV/Handheld magic.</p>
+                    <a href="#" class="btn-amazon" data-search="Nintendo Switch Console">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Nintendo Switch OLED</h3><span class="tag">The Premium Handheld</span>
+                    <p>The pinnacle of the previous generation. It features a stunning, vibrant OLED screen that makes games pop perfectly when playing in handheld mode.</p>
+                    <a href="#" class="btn-amazon" data-search="Nintendo Switch OLED Console">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Nintendo Switch Lite</h3><span class="tag">The Budget Portable</span>
+                    <p>A strictly handheld device. The controllers do not detach, and it cannot connect to a TV. It is lightweight, highly durable, and perfect for kids.</p>
+                    <a href="#" class="btn-amazon" data-search="Nintendo Switch Lite Console">Check In Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section data-category="games">
+            <h2>3. The Ecosystem & Essential Gear</h2>
+            <p class="intro-text">Because the Switch is a compact tablet, expanding the storage and getting a comfortable controller for TV play is absolutely essential.</p>
+            
+            <h3 style="color: #fff; margin-top: 2rem;">The Required Upgrades</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>MicroSD Storage Cards</h3><span class="tag">Crucial Hardware</span>
+                    <p>Nintendo consoles come with very little internal storage. If you want to download games, a 512GB or 1TB SanDisk MicroSD card is mandatory.</p>
+                    <a href="#" class="btn-amazon" data-search="SanDisk 512GB MicroSD Nintendo Switch">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Nintendo Pro Controller</h3><span class="tag">For The Living Room</span>
+                    <p>The small side-controllers (Joy-Cons) are great for travel, but this premium, traditional controller is essential for long gaming sessions on your TV.</p>
+                    <a href="#" class="btn-amazon" data-search="Nintendo Switch Pro Controller">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Switch Online Membership</h3><span class="tag">The Subscription</span>
+                    <p>Required to play games like Mario Kart online with friends. It also gives you instant access to a massive library of classic retro games.</p>
+                    <a href="#" class="btn-amazon" data-search="Nintendo Switch Online 12 Month">Check In Amazon</a>
+                </div>
+            </div>
+
+            <h3 style="color: #fff; margin-top: 3rem;">Top 10 Physical Masterpieces</h3>
+            <p class="intro-text">Nintendo games rarely drop in price and hold their value forever. These are the absolute must-haves.</p>
+            <div class="grid">
+                <div class="card"><h3>Mario Kart 8 Deluxe</h3><p>The ultimate racing game and a mandatory purchase for every console owner.</p><a href="#" class="btn-amazon" data-search="Mario Kart 8 Deluxe Switch">Check In Amazon</a></div>
+                <div class="card"><h3>The Legend of Zelda: Tears of the Kingdom</h3><p>A massive, physics-bending adventure in a breathtaking open world.</p><a href="#" class="btn-amazon" data-search="Zelda Tears of the Kingdom Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Super Mario Bros. Wonder</h3><p>A stunning, creative, and joyful return to classic 2D Mario platforming.</p><a href="#" class="btn-amazon" data-search="Super Mario Bros Wonder Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Super Smash Bros. Ultimate</h3><p>The greatest fighting game ever made featuring dozens of iconic characters.</p><a href="#" class="btn-amazon" data-search="Super Smash Bros Ultimate Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Animal Crossing: New Horizons</h3><p>Build your own relaxing island paradise and visit your friends online.</p><a href="#" class="btn-amazon" data-search="Animal Crossing New Horizons Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Pokémon Scarlet & Violet</h3><p>Explore a fully open world, catch new creatures, and battle trainers.</p><a href="#" class="btn-amazon" data-search="Pokemon Scarlet Violet Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Super Mario Odyssey</h3><p>A sprawling 3D adventure where Mario explores imaginative new kingdoms.</p><a href="#" class="btn-amazon" data-search="Super Mario Odyssey Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Luigi's Mansion 3</h3><p>Suck up ghosts and solve puzzles in a beautifully animated haunted hotel.</p><a href="#" class="btn-amazon" data-search="Luigis Mansion 3 Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Splatoon 3</h3><p>A highly competitive, fast-paced multiplayer shooter using colorful ink.</p><a href="#" class="btn-amazon" data-search="Splatoon 3 Switch">Check In Amazon</a></div>
+                <div class="card"><h3>Metroid Prime Remastered</h3><p>A gorgeous, atmospheric sci-fi adventure that holds up perfectly today.</p><a href="#" class="btn-amazon" data-search="Metroid Prime Remastered Switch">Check In Amazon</a></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Filter Script
+        function filterSelection(category, activeBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+            
+            document.querySelectorAll('section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        // Automated Amazon Affiliate Script
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.btn-amazon').forEach(btn => {
+                const searchQuery = btn.getAttribute('data-search');
+                btn.href = `https://www.amazon.ae/s?k=${encodeURIComponent(searchQuery)}&tag=dubaicinema-21`;
+            });
+        });
+    </script>
+</body>
+</html>
