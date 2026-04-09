@@ -12,6 +12,7 @@
             --ps-blue: #00439c;
             --xbox-green: #107c10;
             --nin-red: #e60012;
+            --retro-purple: #8a2be2; /* Classic 16-bit Purple */
             --dark: #121212;
             --gray: #2a2a2a;
             --light: #1a1a1a;
@@ -49,6 +50,8 @@
         .card-ps:hover { border-color: var(--ps-blue); box-shadow: 0 0 15px rgba(0, 67, 156, 0.4); }
         .card-xbox:hover { border-color: var(--xbox-green); box-shadow: 0 0 15px rgba(16, 124, 16, 0.4); }
         .card-nin:hover { border-color: var(--nin-red); box-shadow: 0 0 15px rgba(230, 0, 18, 0.4); }
+        .card-retro:hover { border-color: var(--retro-purple); box-shadow: 0 0 15px rgba(138, 43, 226, 0.4); }
+        .tagline-retro { background: var(--retro-purple) !important; color: var(--text-light) !important; }
 
         .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 50px; transition: all 0.2s ease; text-align: center; color: #fff; }
         .btn-ps { background-color: var(--ps-blue); }
@@ -78,6 +81,7 @@
             <button class="filter-btn" onclick="filterSelection('tech', this)">The Tech</button>
             <button class="filter-btn" onclick="filterSelection('budget', this)">Budgets</button>
             <button class="filter-btn" onclick="filterSelection('worlds', this)">Console Worlds</button>
+            <button class="filter-btn" onclick="filterSelection('retro', this)">Retro Gaming</button>
         </div>
 
         <section data-category="tech">
@@ -145,6 +149,43 @@
             </div>
         </section>
 
+        <section data-category="retro">
+            <h2 style="border-left-color: var(--retro-purple);">4. The Retro Revolution: Anbernic</h2>
+            <p class="intro-text">While modern consoles dominate the living room, a massive retro movement is taking over. These pocket-sized time machines flawlessly play thousands of classic games without internet or subscriptions.</p>
+            
+            <div class="grid">
+                <div class="card bg-dark card-retro">
+                    <h3>RG35XXSP</h3><span class="tagline tagline-retro">The Clamshell</span>
+                    <p>Perfectly recreates the iconic folding design of the early 2000s. The screen is protected in your pocket, running a lightweight OS that easily handles 8-bit classics up to the original PlayStation (PS1).</p>
+                </div>
+                
+                <div class="card bg-dark card-retro">
+                    <h3>RG40XX V</h3><span class="tagline tagline-retro">The Vertical</span>
+                    <p>For the gamer who wants that exact ergonomic feel of the 1989 classic "brick", but modernized with a stunning, bright 4-inch IPS display and an added analog stick for arcade games.</p>
+                </div>
+                
+                <div class="card bg-dark card-retro">
+                    <h3>RG Cube</h3><span class="tagline tagline-retro">The 1:1 Screen</span>
+                    <p>A premium handheld featuring a unique, perfectly square screen. The 1:1 aspect ratio makes it the undisputed best device for classic Game Boy Color and dual-screen Nintendo DS games.</p>
+                </div>
+                
+                <div class="card bg-dark card-retro">
+                    <h3>RG556</h3><span class="tagline tagline-retro">The Flagship</span>
+                    <p>The ultimate high-end powerhouse. Featuring a 5.48-inch AMOLED touchscreen, Hall effect joysticks, and Android OS to flawlessly crush massive 3D games from the PS2 and GameCube eras.</p>
+                </div>
+            </div>
+
+            <div class="card bg-light card-retro" style="margin-top: 20px;">
+                <h3 style="color: var(--retro-purple); margin-top: 0;">The Ecosystem: What Can You Actually Play?</h3>
+                <p style="color: #cccccc;">Unlike modern consoles, Anbernic devices rely on emulation. By loading game files (ROMs) onto a single MicroSD card, you carry a massive library in a single slot.</p>
+                <ul style="color: #cccccc; line-height: 1.8; margin-bottom: 0;">
+                    <li><strong>The Golden Age:</strong> Complete access to the NES, SNES, Sega Genesis, and all Game Boy libraries.</li>
+                    <li><strong>The 3D Pioneers:</strong> Smooth playback of the original PlayStation (PS1), Nintendo 64, and Dreamcast.</li>
+                    <li><strong>High-End Emulation:</strong> The power to run demanding 3D libraries from the PlayStation 2 (PS2), Nintendo GameCube, and modern Android mobile games (available on RG Cube & RG556).</li>
+                </ul>
+            </div>
+        </section>
+
     </div>
 
     <script>
@@ -202,16 +243,16 @@
         background-color: #2a2a2a;
         box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
     }
-</style>
+    </style>
 
-<div class="network-footer">
-    <h4>Explore The Dubai Tech Network</h4>
-    <div class="network-links">
-        <a href="https://kalpdev2010-hub.github.io/dubai-cinema-guide/" target="_blank">Home Cinema Guide</a>
-        <a href="https://kalpdev2010-hub.github.io/dubai-dj-guide/" target="_blank">Pro DJ Guide</a>
-        <a href="https://kalpdev2010-hub.github.io/dubai-gaming-guide/" target="_blank">Gaming Setup Guide</a>
+    <div class="network-footer">
+        <h4>Explore The Dubai Tech Network</h4>
+        <div class="network-links">
+            <a href="https://kalpdev2010-hub.github.io/dubai-cinema-guide/" target="_blank">Home Cinema Guide</a>
+            <a href="https://kalpdev2010-hub.github.io/dubai-dj-guide/" target="_blank">Pro DJ Guide</a>
+            <a href="https://kalpdev2010-hub.github.io/dubai-gaming-guide/" target="_blank">Gaming Setup Guide</a>
+        </div>
     </div>
-</div>
     
 </body>
 </html>
