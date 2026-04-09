@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xbox World | Dubai Gaming Guide</title>
+    <meta name="description" content="Explore the Xbox ecosystem. Compare the Series X, Series S, and Xbox One, and discover the best Game Pass setups in Dubai.">
+    <style>
+        :root { 
+            --xbox-green: #107c10; 
+            --xbox-light: #159a15;
+            --amazon: #28a745;  
+            --dark: #121212; 
+            --gray: #2a2a2a; 
+            --light: #1a1a1a; 
+            --text-light: #ffffff;
+            --text-dark: #121212; 
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: var(--dark); color: var(--text-light); line-height: 1.6; }
+        header { text-align: center; padding: 2rem 2rem; background: linear-gradient(135deg, #0a1f0a, #107c10); border-bottom: 3px solid var(--xbox-light); }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+        
+        .quick-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.5rem; }
+        .nav-pill { padding: 8px 20px; background-color: rgba(0,0,0,0.5); color: var(--text-light); text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 0.85rem; border: 1px solid #444; transition: all 0.2s ease; }
+        .nav-pill:hover { background-color: var(--xbox-light); border-color: var(--xbox-light); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Filter Styles */
+        .filter-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+        .filter-icon { color: var(--xbox-light); font-size: 1.1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; }
+        .filter-btn { background: var(--gray); border: 1px solid #444; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.2s; font-weight: bold; font-size: 0.9rem; }
+        .filter-btn:hover, .filter-btn.active { background: var(--xbox-light); border-color: var(--xbox-light); color: #fff; box-shadow: 0 0 10px rgba(21, 154, 21, 0.5); }
+        
+        /* Section Headers */
+        h2 { border-left: 4px solid var(--xbox-green); padding-left: 15px; margin-top: 1rem; color: #fff; font-size: 1.8rem; }
+        .intro-text { color: #cccccc; font-size: 1.05rem; margin-bottom: 2rem; max-width: 900px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 1.5rem; }
+        
+        .card { padding: 2rem; border-radius: 12px; background-color: var(--light); border: 1px solid #333; display: flex; flex-direction: column; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--xbox-green); box-shadow: 0 0 15px rgba(16, 124, 16, 0.3); }
+        .card h3 { margin-top: 0; font-size: 1.4rem; margin-bottom: 5px; color: #fff; }
+        .tag { color: var(--xbox-light); font-size: 0.85rem; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .card p { flex-grow: 1; color: #aaaaaa; font-size: 0.95rem; }
+        
+        .btn-amazon { margin-top: 20px; padding: 12px 25px; background-color: var(--amazon); color: #fff; text-decoration: none; font-weight: bold; border-radius: 50px; text-align: center; transition: background 0.2s ease; display: block; width: 100%; box-sizing: border-box; }
+        .btn-amazon:hover { background-color: #218838; }
+
+        .info-box { background: var(--gray); padding: 2rem; border-radius: 12px; border: 1px solid #444; margin-bottom: 2rem; }
+        .info-box h3 { color: var(--xbox-light); margin-top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Xbox World</h1>
+        <p>The ultimate value ecosystem powered by Game Pass.</p>
+        <div class="quick-nav">
+            <a href="index.html" class="nav-pill">Home Gateway</a>
+            <a href="playstation.html" class="nav-pill">PlayStation World</a>
+            <a href="nintendo.html" class="nav-pill">Nintendo World</a>
+            <a href="setup.html" class="nav-pill">Command Center</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="filter-wrapper">
+            <span class="filter-icon">Explore</span>
+            <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+            <button class="filter-btn" onclick="filterSelection('info', this)">Info</button>
+            <button class="filter-btn" onclick="filterSelection('hardware', this)">Consoles</button>
+            <button class="filter-btn" onclick="filterSelection('games', this)">Games Library</button>
+        </div>
+
+        <section data-category="info">
+            <h2>1. The Xbox Experience</h2>
+            <div class="info-box">
+                <h3>Why Choose Microsoft?</h3>
+                <p>Xbox is designed to be the "Netflix of Gaming." While they have powerful consoles, their biggest selling point is <strong>Xbox Game Pass</strong>—a subscription that gives you instant access to hundreds of high-quality games, including brand-new releases on day one. If you want maximum variety for a flat monthly fee rather than buying individual 250 AED games, Xbox is the undisputed champion.</p>
+            </div>
+        </section>
+
+        <section data-category="hardware">
+            <h2>2. The Hardware Cities</h2>
+            <p class="intro-text">Microsoft offers distinct performance tiers to match your display and budget.</p>
+            <div class="grid hardware-grid">
+                <div class="card">
+                    <h3>Xbox Series X (Disc Edition)</h3><span class="tag">The 4K Flagship</span>
+                    <p>The fastest, most powerful Xbox. Plays native 4K games, physical discs, and features a massive 1TB or 2TB hard drive.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox Series X Console">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Xbox Series X (All-Digital)</h3><span class="tag">The Modern Powerhouse</span>
+                    <p>The same elite 4K processing power as the flagship, but finished in Robot White with no disc drive for a purely digital library.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox Series X Digital Console">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Xbox Series S</h3><span class="tag">The Ultimate Value</span>
+                    <p>Incredibly small, digital-only, and highly affordable. It targets 1440p resolution instead of 4K, making it perfect for monitors or secondary rooms.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox Series S Console">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Xbox One S/X</h3><span class="tag">The Legacy Budget Choice</span>
+                    <p>The previous generation. Still highly capable of playing older Game Pass titles and serving as a fantastic media center for tight budgets.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox One Console">Check In Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section data-category="games">
+            <h2>3. The Game Library & Ecosystem</h2>
+            <p class="intro-text">Because Xbox is a digital-first ecosystem, expanding your storage and managing your subscriptions is crucial.</p>
+            
+            <h3 style="color: #fff; margin-top: 2rem;">Digital Subscriptions & Storage</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>Xbox Game Pass Ultimate</h3><span class="tag">The Must-Have Subscription</span>
+                    <p>Includes online multiplayer, PC Game Pass, cloud gaming, and a library of hundreds of top-tier games. The core of the Xbox experience.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox Game Pass Ultimate UAE">Check In Amazon</a>
+                </div>
+                <div class="card">
+                    <h3>Seagate / WD Expansion Cards</h3><span class="tag">Essential Hardware</span>
+                    <p>Game Pass means massive downloads. These official plug-and-play SSD cards instantly add 1TB or 2TB of high-speed storage to your console.</p>
+                    <a href="#" class="btn-amazon" data-search="Xbox Series X Storage Expansion Card">Check In Amazon</a>
+                </div>
+            </div>
+
+            <h3 style="color: #fff; margin-top: 3rem;">Top 10 Physical Showpieces</h3>
+            <p class="intro-text">Even with Game Pass, these massive titles are highly sought after by physical collectors.</p>
+            <div class="grid">
+                <div class="card"><h3>Halo Infinite</h3><p>The iconic sci-fi shooter featuring the legendary Master Chief.</p><a href="#" class="btn-amazon" data-search="Halo Infinite Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Forza Horizon 5</h3><p>A breathtaking, open-world racing festival set in beautifully rendered Mexico.</p><a href="#" class="btn-amazon" data-search="Forza Horizon 5 Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Starfield</h3><p>An absolutely massive space-exploration RPG from the creators of Skyrim.</p><a href="#" class="btn-amazon" data-search="Starfield Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Microsoft Flight Simulator</h3><p>Fly real planes across a 1:1 photorealistic map of the entire Earth.</p><a href="#" class="btn-amazon" data-search="Microsoft Flight Simulator Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Cyberpunk 2077: Ultimate</h3><p>A visually stunning dystopian RPG that pushes the Series X to its limits.</p><a href="#" class="btn-amazon" data-search="Cyberpunk 2077 Ultimate Edition Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Senua's Saga: Hellblade II</h3><p>A cinematic, psychological journey with some of the best graphics this generation.</p><a href="#" class="btn-amazon" data-search="Hellblade 2 Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Gears 5</h3><p>A brutal, fast-paced, cover-based action shooter built for co-op.</p><a href="#" class="btn-amazon" data-search="Gears 5 Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Diablo IV</h3><p>The ultimate dark fantasy action-RPG with endless loot and dungeon crawling.</p><a href="#" class="btn-amazon" data-search="Diablo IV Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Call of Duty: Modern Warfare III</h3><p>The undisputed king of competitive, fast-paced multiplayer shooting.</p><a href="#" class="btn-amazon" data-search="Call of Duty Modern Warfare 3 Xbox">Check In Amazon</a></div>
+                <div class="card"><h3>Sea of Thieves</h3><p>A purely fun, open-world pirate adventure to play with your friends.</p><a href="#" class="btn-amazon" data-search="Sea of Thieves Xbox">Check In Amazon</a></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Filter Script
+        function filterSelection(category, activeBtn) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+            
+            document.querySelectorAll('section').forEach(sec => {
+                if (category === 'all' || sec.dataset.category === category) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        // Automated Amazon Affiliate Script
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.btn-amazon').forEach(btn => {
+                const searchQuery = btn.getAttribute('data-search');
+                btn.href = `https://www.amazon.ae/s?k=${encodeURIComponent(searchQuery)}&tag=dubaicinema-21`;
+            });
+        });
+    </script>
+</body>
+</html>
