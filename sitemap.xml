@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/index.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/playstation.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/xbox.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/nintendo.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/setup.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/anbernic.html</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://kalpdev2010-hub.github.io/dubai-gaming-guide/news.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <priority>0.90</priority>
   </url>
 </urlset>
