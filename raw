@@ -1,0 +1,21 @@
+```json
+{
+    "scraper/monitor_deal_scraper.py": """
+import unittest
+from scraper.monitor_deal_scraper import MonitorDealScraper
+
+class TestMonitorDealScraper(unittest.TestCase):
+
+    def test_init(self):
+        scraper = MonitorDealScraper()
+        # Add assertions for the __init__ method
+
+    def test_scrape(self):
+        scraper = MonitorDealScraper()
+        # Add assertions for the scrape method
+
+if __name__ == '__main__':
+    unittest.main()
+"""
+}
+```
