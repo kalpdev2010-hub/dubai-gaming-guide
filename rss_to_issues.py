@@ -61,7 +61,7 @@ for brand, rss_url in FEEDS.items():
             tree = ET.parse(response)
             root = tree.getroot()
             
-            for entry in root.findall('{http://www.w3.org/2005/Atom}entry')[:2]:
+            for entry in root.findall('{http://www.w3.org/2005/Atom}entry')[:5]:
                 title = entry.find('{http://www.w3.org/2005/Atom}title').text
                 raw_link = entry.find('{http://www.w3.org/2005/Atom}link').attrib['href']
                 clean_link = raw_link.split('url=')[1].split('&ct=ga')[0] if 'url=' in raw_link else raw_link
